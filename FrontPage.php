@@ -12,12 +12,12 @@
 	<br><br>
 
 	<div style="text-align: center;">
-		<a class="button" href="/story/Mystery.php">Enter the Game</a>
+		<a class="button" href="story/Start.php">Enter the Game</a>
 	</div>
 </body>
 
 <footer>
-	
+
 </footer>
 
 </html>
