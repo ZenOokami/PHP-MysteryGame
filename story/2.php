@@ -4,21 +4,23 @@ session_start();
 
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title></title>
+    <title>You took the <?php $_SESSION["choice_made"] = $_POST["choice"];
+	print($_SESSION["choice_made"]); 
+	?></title>
 </head>
 
 <body>
 
     <?php
-    $_SESSION["choice_made"] = $_POST["choice"];
     //echo $_SESSION["choice_made"];
 	
 	
 	if($_SESSION["choice_made"] == "smoke"){
 		$_SESSION["hp"] -= 5;
 		print("<p>
-			*Detective lights up*
+			*Detective lights up* <b><i>-5 hp, smoking is bad for your health!</i></b>
 			<br>
 			Nothing like a smoke when it’s when raining.
 		</p>");

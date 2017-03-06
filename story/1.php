@@ -1,8 +1,11 @@
-<?php session_start(); ?>
+<?php 
+session_start(); 
+?>
 
 <!DOCTYPE html>
 <html>
 <head>
+	<title>Start Your Case!</title>
 </head>
 
 <body>

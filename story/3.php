@@ -7,12 +7,14 @@ session_start();
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
-	<title></title>
+	<title><?php
+	$_SESSION["choice_made"] = $_POST["choice"];
+	print($_SESSION["choice_made"]); 
+	?></title>
 </head>
 
 <body>
 	<?php
-	$_SESSION["choice_made"] = $_POST["choice"];
 	
 	if($_SESSION["choice_made"] == "raise"){
 		print("<p>
@@ -20,7 +22,7 @@ session_start();
 		</p>");
 	}else{
 		print("<p>
-		Not until he pays me back for that bowling fiasco…
+		Not until he pays me back for that <i><b>bowling</b></i> fiasco…
 		</p>");
 	}
 	
@@ -53,9 +55,9 @@ session_start();
 	?>
 	
 	<form action="4.php" method="post">
-		<input type="radio" name="choice" value="csDepartment"><b>Visit the Head of the CS Department</b>
-		<input type="radio" name="choice" value="roommate"><b>Visit the relocated roommate</b>
-		<input type="radio" name="choice" value="crimeScene"><b>Visit the Crime Scene</b>
+		<input type="radio" name="choice" value="csDepartment"><b>Visit the Head of the CS Department</b><i>($25 cab fee)</i>
+		<input type="radio" name="choice" value="roommate"><b>Visit the relocated roommate</b><i>($20 cab fee)</i>
+		<input type="radio" name="choice" value="crimeScene"><b>Visit the Crime Scene</b><i>($20 cab fee)</i>
 		<br>
 		<input type="submit">
 	</form>
